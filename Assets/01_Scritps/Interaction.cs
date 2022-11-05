@@ -8,11 +8,11 @@ public class Interaction : MonoBehaviour
     public float rayDistance = 40;
 
     //Para disparar
-    public bool canShoot = false;
-    public float timer = 0;
-    public float timeBtwShoot = 0.5f;
-    public GameObject bulletPrefab;
-    public Transform firePoint;
+    // public bool canShoot = false;
+    // public float timer = 0;
+    // public float timeBtwShoot = 0.5f;
+    // public GameObject bulletPrefab;
+    // public Transform firePoint;
 
 
     // Start is called before the first frame update
@@ -30,29 +30,29 @@ public class Interaction : MonoBehaviour
         if(Physics.Raycast(ray, out hit, rayDistance, interactionLayer, QueryTriggerInteraction.Collide))
          {
             Debug.Log("Encontre un objeto");
-            if(hit.collider.gameObject.CompareTag("Enemy"))
-            {
-                Attack();    
-            }
+            // if(hit.collider.gameObject.CompareTag("Enemy"))
+            // {
+            //     Attack();    
+            // }
          }
         
     }
 
 
-   public void Attack()
-    {
-       if(canShoot)
-        {
-          if(timer < timeBtwShoot)
-           {
-            timer += Time.deltaTime;
-           }
-           else
-           {
-            timer = 0;
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-           }
-        }      
-    }
+//    public void Attack()
+//     {
+//        if(canShoot)
+//         {
+//           if(timer < timeBtwShoot)
+//            {
+//             timer += Time.deltaTime;
+//            }
+//            else
+//            {
+//             timer = 0;
+//             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+//            }
+//         }      
+//     }
 
 }

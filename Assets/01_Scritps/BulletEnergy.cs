@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-using TMPro;
-using UnityEngine.UI;
 
-public class Bullet : MonoBehaviour
+
+public class BulletEnergy : MonoBehaviour
 {
     public float speed = 10;
     public Rigidbody rb;
@@ -13,18 +11,17 @@ public class Bullet : MonoBehaviour
     public AudioClip destroySoundEffect;
     public GameObject destroyedEffect;
 
+
     // Start is called before the first frame update
     void Start()
     {
-
-     
+        rb.velocity = direction.normalized * speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = direction.normalized * speed;
-       
+        
     }
 
     void OnCollisionEnter(Collision collision)
@@ -39,8 +36,4 @@ public class Bullet : MonoBehaviour
        
       }
     }
-
-    
-
-
 }

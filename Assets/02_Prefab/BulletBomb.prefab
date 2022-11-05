@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6574186228860407113
+--- !u!1 &8781314403900182039
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2265553717644100983}
-  - component: {fileID: 8441090819782597512}
-  - component: {fileID: 3202719184095569253}
-  - component: {fileID: 4617526252328190904}
-  - component: {fileID: 6169348385498126640}
-  - component: {fileID: 6931840037110945204}
-  - component: {fileID: 3059887442372412233}
+  - component: {fileID: 7669599316991121788}
+  - component: {fileID: 1760270649152488632}
+  - component: {fileID: 3072256260274039451}
+  - component: {fileID: 8747165583566918992}
+  - component: {fileID: -7610647405987005060}
+  - component: {fileID: 8855585772364074760}
+  - component: {fileID: 268082880423372170}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: BulletBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2265553717644100983
+--- !u!4 &7669599316991121788
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6574186228860407113}
+  m_GameObject: {fileID: 8781314403900182039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 2.3293512, z: -4.68}
-  m_LocalScale: {x: 0.17452766, y: 0.17452766, z: 0.17452766}
+  m_LocalPosition: {x: 0.361, y: 2.207, z: -5.19}
+  m_LocalScale: {x: 2.2086065, y: 2.2086065, z: 2.2086065}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8441090819782597512
+--- !u!33 &1760270649152488632
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6574186228860407113}
+  m_GameObject: {fileID: 8781314403900182039}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3202719184095569253
+--- !u!23 &3072256260274039451
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6574186228860407113}
+  m_GameObject: {fileID: 8781314403900182039}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c0a076d70c94cc4a9100dee3ccb155f, type: 2}
+  - {fileID: 2100000, guid: 2bee72e63483a29469031bb3787cf53a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,26 +87,43 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4617526252328190904
+--- !u!135 &8747165583566918992
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6574186228860407113}
+  m_GameObject: {fileID: 8781314403900182039}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &6169348385498126640
+--- !u!114 &-7610647405987005060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781314403900182039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9377082f54bdcc044ad7dfd9b28d862d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  rb: {fileID: 8855585772364074760}
+  direction: {x: 0, y: 0, z: 1}
+  destroySoundEffect: {fileID: 8300000, guid: 7762a90cc306d5a4aa13f6bb03fb9ca5, type: 3}
+  destroyedEffect: {fileID: 33342934889386412, guid: a1cb3f355db42ec4ca7d0946b426ab42, type: 3}
+--- !u!54 &8855585772364074760
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6574186228860407113}
+  m_GameObject: {fileID: 8781314403900182039}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -114,39 +131,22 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6931840037110945204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6574186228860407113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fb40a276e243d64d80efccc68ee64b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  rb: {fileID: 6169348385498126640}
-  direction: {x: 0, y: 0, z: 1}
-  destroySoundEffect: {fileID: 8300000, guid: 44dbbf94fe47f424f937eef6bb95d4de, type: 3}
-  destroyedEffect: {fileID: 33342934889386412, guid: a1cb3f355db42ec4ca7d0946b426ab42, type: 3}
---- !u!108 &3059887442372412233
+--- !u!108 &268082880423372170
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6574186228860407113}
+  m_GameObject: {fileID: 8781314403900182039}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.990566, g: 0, b: 0, a: 1}
-  m_Intensity: 3
-  m_Range: 3
+  m_Color: {r: 0.8396226, g: 0.12990382, b: 0.50621194, a: 1}
+  m_Intensity: 10
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -155,9 +155,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Bias: 1.12
+    m_NormalBias: 1.57
+    m_NearPlane: 6.8
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
