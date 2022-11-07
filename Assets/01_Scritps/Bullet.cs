@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = direction.normalized * speed;
+       transform.Translate(Vector3.forward * speed * Time.deltaTime);
        
     }
 

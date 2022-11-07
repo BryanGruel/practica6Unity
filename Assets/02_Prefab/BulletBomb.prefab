@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 268082880423372170}
   m_Layer: 0
   m_Name: BulletBomb
-  m_TagString: Untagged
+  m_TagString: BulletEnergy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,8 @@ MonoBehaviour:
   rb: {fileID: 8855585772364074760}
   direction: {x: 0, y: 0, z: 1}
   destroySoundEffect: {fileID: 8300000, guid: 7762a90cc306d5a4aa13f6bb03fb9ca5, type: 3}
-  destroyedEffect: {fileID: 33342934889386412, guid: a1cb3f355db42ec4ca7d0946b426ab42, type: 3}
+  destroyedEffect: {fileID: 33342934889386412, guid: a1cb3f355db42ec4ca7d0946b426ab42,
+    type: 3}
 --- !u!54 &8855585772364074760
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131,7 +132,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!108 &268082880423372170
 Light:

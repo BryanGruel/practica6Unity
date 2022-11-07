@@ -15,13 +15,13 @@ public class BulletEnergy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = direction.normalized * speed;
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision collision)

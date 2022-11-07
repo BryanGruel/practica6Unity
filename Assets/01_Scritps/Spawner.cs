@@ -10,6 +10,8 @@ public class Spawner : MonoBehaviour
     float timer = 0;
     public float timeBtwSpawn = 4;
 
+    public bool ActivadoSpawner1 = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,13 @@ public class Spawner : MonoBehaviour
             float z = Random.Range(point1.position.z, point2.position.z);
             Vector3 pos = new Vector3(x, transform.position.y, transform.position.z);
             Instantiate(items[Random.Range(0, items.Count)], pos, Quaternion.identity);
-            
+            CondicionSpawner1();
         }
+    }
+
+
+    public void CondicionSpawner1()
+    {
+      ActivadoSpawner1 = true;
     }
 }

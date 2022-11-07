@@ -9,7 +9,7 @@ using System;
 public class Player : MonoBehaviour
 {
     public Rigidbody rb;
-    public float speed=3;
+    public float speed=5;
     public bool alive = true;
     public GameObject gameOverPanel;
     public GameObject DamageLifePanel;
@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public GameObject bulletEnergyPrefab;
     public Transform firePoint;
     public Animator redPanel;
+    Gyroscope gyro;
 
     //Barra de vida
     public Image lifeBar;
@@ -62,6 +63,12 @@ public class Player : MonoBehaviour
         gameOverPanel.SetActive(false);
         lifeBar.fillAmount = life / maxLife; 
         EnergyBar.fillAmount = Energy / maxEnergy; 
+         // verificamos si hay gyroscopio
+        if (SystemInfo.supportsGyroscope)
+        {
+            gyro = Input.gyro;
+            gyro.enabled = true;
+        }
     }
 
     // Update is called once per frame
@@ -174,11 +181,6 @@ public class Player : MonoBehaviour
         DamageLifePanel.SetActive(false);
     }
 
-
-    public void ReloadGame()
-    {
-        SceneManager.LoadScene("SampleScene");
-    }
 
     void OnCollisionEnter(Collision collision)
     {

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3059887442372412233}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,8 @@ MonoBehaviour:
   rb: {fileID: 6169348385498126640}
   direction: {x: 0, y: 0, z: 1}
   destroySoundEffect: {fileID: 8300000, guid: 44dbbf94fe47f424f937eef6bb95d4de, type: 3}
-  destroyedEffect: {fileID: 33342934889386412, guid: a1cb3f355db42ec4ca7d0946b426ab42, type: 3}
+  destroyedEffect: {fileID: 33342934889386412, guid: a1cb3f355db42ec4ca7d0946b426ab42,
+    type: 3}
 --- !u!108 &3059887442372412233
 Light:
   m_ObjectHideFlags: 0
